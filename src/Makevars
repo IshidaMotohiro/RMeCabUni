@@ -1,0 +1,17 @@
+
+## comment out variables if you dont have these libs:
+
+# libmecab.lib
+MECAB = -lmecab
+
+# R.lib
+# R = -lR
+
+
+PKG_LIBS = -L/usr/local/lib $(MECAB)
+#  $(R) 
+
+
+
+PKG_CPPFLAGS = -I.
+# Ic:/workhome/packages/include -Ic:/workhome/packages -Lc:/workhome/packages

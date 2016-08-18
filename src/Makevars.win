@@ -1,0 +1,38 @@
+
+## comment out variables if you dont have these libs:
+
+# libmecab.lib
+# MECAB = -lmecab
+
+# R.lib
+# R = -lR
+
+#AB = $(cp src/Makevars.win32 src-386/Makevars.win)
+#CD = $(cp src/Makevars.win64 src-x64/Makevars.win)
+#
+#:
+#	$(AB)
+#	$(CD)
+#
+# PKG_LIBS = -L/usr/local/lib $(MECAB)
+#  $(R) 
+###################################################
+
+MECAB = -llibmecab
+MECAB64 = -llibmecab64
+
+PKG_LIBS = -Lc:/workhome/RMeCabUni $(MECAB)
+PKG_LIBS64 = -Lc:/workhome/RMeCabUni $(MECAB64)
+
+ifeq "${R_ARCH}" "/x64"
+     PKG_LIBS = -Lc:/workhome/RMeCabUni $(MECAB64)# value for 64-bit Windows
+     else
+     PKG_LIBS = -Lc:/workhome/RMeCabUni $(MECAB)# value for 32-bit Windows
+     endif
+
+PKG_CPPFLAGS = -I.
+# Ic:/workhome/packages/include -Ic:/workhome/packages -Lc:/workhome/packages
+#
+#all: 
+#	$(AB) 	$(CD)
+
