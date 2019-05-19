@@ -113,7 +113,7 @@ void wide (const string &src, wstring &target) {
 char meisi[128];
 char  * meisiCode(){
   //    SEXP res;
-  const char  meisi_utf8[]  =  {0xe5, 0x90, 0x8d, 0xe8, 0xa9, 0x9e, 0}; //名詞
+  const char  meisi_utf8[]  =  {static_cast<char>( 0xe5, 0x90, 0x8d, 0xe8, 0xa9, 0x9e, 0)}; //名詞
   //  char        buf[128];
   {
 	void *cd;
@@ -135,7 +135,7 @@ char  * meisiCode(){
 char keiyou[128];
 char  * keiyouCode(){
   //    SEXP res;
-  const char  keiyou_utf8[]  =  {0xe5,
+  const char  keiyou_utf8[]  =  {static_cast<char>(0xe5,
 								 0xbd,
 								 0xa2,
 								 0xe5,
@@ -144,7 +144,7 @@ char  * keiyouCode(){
 								 0xe8,
 								 0xa9,
 								 0x9e,
-								 0}; //形容詞
+						    0 )}; //形容詞
   //  char        buf[128];
   {
 	void *cd;
@@ -167,7 +167,7 @@ char  * keiyouCode(){
 char kigo[128];
 char  * kigoCode(){
  //    SEXP res;
-  const char  kigo_utf8[]  =  {0xe8, 0xa8, 0x98, 0xe5, 0x8f, 0xb7, 0}; //記号
+  const char  kigo_utf8[]  =  {static_cast<char>(0xe8, 0xa8, 0x98, 0xe5, 0x8f, 0xb7, 0)}; //記号
   //  char        buf[128];
   {
 	void *cd;

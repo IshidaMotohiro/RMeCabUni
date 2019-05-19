@@ -1,11 +1,11 @@
 Package: RMeCabUni
 Type: Package
 Title: interface to MeCab
-Version: 0.01
+Version: 0.03
 Encoding: UTF-8
-Date: 2014-09-22 PM 12:00
+Date: 2019-05-19 PM 16:00
 Author: Motohiro Ishida
 Maintainer: <ishida.motohiro@gmail.com>
-Description: parsing Japanese texts with mecab-0.996 and unidic/ R-3.1.1
+Description: parsing Japanese texts with mecab-0.996 and unidic/ R-3.6.0
 License: GPL | LGPL | BSD
 

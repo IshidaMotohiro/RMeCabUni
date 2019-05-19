@@ -1,6 +1,6 @@
 
 ## comment out variables if you dont have these libs:
-
+# CXX_STD = CXX98
 # libmecab.lib
 MECAB = -lmecab
 
